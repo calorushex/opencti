@@ -11,29 +11,9 @@ Where I deverge here is with some of the connector setup for my own deployment w
 - AlienVault OTX
 - AbuseIPDB
 
-Deployment will require extending the .env file (not in this repo) with some of the required configuration and api keys.
+Deployment will require extending the .env file (sample also in this repo) with some of the required configuration and api keys.
 
 ```
-OPENCTI_ADMIN_EMAIL=admin@opencti.io
-OPENCTI_ADMIN_PASSWORD=
-OPENCTI_ADMIN_TOKEN=
-OPENCTI_BASE_URL=http://localhost:8080
-OPENCTI_HEALTHCHECK_ACCESS_KEY=
-MINIO_ROOT_USER=92c331ab-4dcc-4717-872a-e16da6df58f6
-MINIO_ROOT_PASSWORD=
-RABBITMQ_DEFAULT_USER=opencti
-RABBITMQ_DEFAULT_PASS=
-ELASTIC_MEMORY_SIZE=4G
-CONNECTOR_HISTORY_ID=
-CONNECTOR_EXPORT_FILE_STIX_ID=
-CONNECTOR_EXPORT_FILE_CSV_ID=
-CONNECTOR_IMPORT_FILE_STIX_ID=
-CONNECTOR_EXPORT_FILE_TXT_ID=
-CONNECTOR_IMPORT_DOCUMENT_ID=
-CONNECTOR_ANALYSIS_ID=
-SMTP_HOSTNAME=localhost
-
-
 #abuseipdb
 ABUSEIPDB_API_KEY=
 CONNECTOR_ABUSEIPDB_IPBLACKLIST=
