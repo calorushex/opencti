@@ -15,14 +15,14 @@ Deployment will require extending the .env file (sample also in this repo) with 
 
 ```
 #abuseipdb
-ABUSEIPDB_API_KEY=
-CONNECTOR_ABUSEIPDB_IPBLACKLIST=
-CONNECTOR_ABUSEIPDB_ID=
+ABUSEIPDB_API_KEY=<your abuseipdb API key>
+CONNECTOR_ABUSEIPDB_IPBLACKLIST=<your random GUID>
+CONNECTOR_ABUSEIPDB_ID=<your random GUID>
 
 
 # AlienVault OTX Connector
-CONNECTOR_OTX_ID=
-ALIENVAULT_API_KEY=
+CONNECTOR_OTX_ID=<your random GUID>
+ALIENVAULT_API_KEY=<your api key>
 ALIENVAULT_UPDATE_EXISTING_DATA=True
 ALIENVAULT_BASE_URL=https://otx.alienvault.com
 ALIENVAULT_INTERVAL=1
@@ -37,20 +37,20 @@ ALIENVAULT_ENABLE_ATTACK_PATTERNS_INDICATES=True
 ALIENVAULT_FILTER_INDICATORS=True
 ALIENVAULT_FILTER_INDICATORS_VALID_FROM=3
 
-# Mitre Setup
-CONNECTOR_MITRE_ID=
+# Mitre Setup - no key requied just downloads json from their public github
+CONNECTOR_MITRE_ID=<your random GUID>
 
-# AbuseCH API key
-ABUSECH_AUTH_KEY=
+# AbuseCH API key - this is universal for malwarebazaar, urlhaus, and threatfox
+ABUSECH_AUTH_KEY=<your abusech api key>
 
 # Malware Bazar Setup
-CONNECTOR_MALWAREBAZAAR_ID=
+CONNECTOR_MALWAREBAZAAR_ID=<your random GUID>
 
 # URLHaus Setup
-CONNECTOR_URLHAUS_ID=
+CONNECTOR_URLHAUS_ID=<your random GUID>
 
 # ThreatFox Setup
-CONNECTOR_THREATFOX_ID=
+CONNECTOR_THREATFOX_ID=<your random GUID>
 ```
 
 Each connector needs to be a unique GUID value. You can generate this with
