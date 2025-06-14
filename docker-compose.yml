@@ -285,7 +285,7 @@ services:
       - CONNECTOR_ID=${CONNECTOR_MITRE_ID}
       - CONNECTOR_TYPE=EXTERNAL_IMPORT
       - CONNECTOR_NAME=MITRE-Attack
-      - CONNECTOR_SCOPE=attack-pattern,intrusion-set,tool,malware
+      - CONNECTOR_SCOPE=attack-pattern,intrusion-set,threat-actor,campaign,tool,malware
       - INTERVAL=86400
     depends_on:
       opencti:
