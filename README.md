@@ -59,6 +59,33 @@ Each connector needs to be a unique GUID value. You can generate this with
 uuidgen
 ```
 
+To run the instance
+
+```
+sudo docker compose up -d
+```
+
+To run or restart a specific connector
+
+```
+sudo docker compose down connector-abuseipdb-ipblacklist
+sudo docker compose restart connector-abuseipdb-ipblacklist
+
+```
+
+To invetigate logs for connectors
+
+```
+sudo docker compose logs --since=5m connector-mitre
+```
+
+To bring the instance down
+
+```
+sudo docker compose down
+```
+
+
 ## Documentation
 
 You can find the detailed documentation about the Docker installation in the [OpenCTI documentation space](https://docs.opencti.io/latest/deployment/installation/#using-docker).

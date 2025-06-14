@@ -304,7 +304,7 @@ services:
       - INTERVAL=3600
       - MALWAREBAZAAR_RECENT_ADDITIONS_API_URL=https://mb-api.abuse.ch/api/v1/
       - MALWAREBAZAAR_RECENT_ADDITIONS_COOLDOWN_SECONDS=300
-      - MALWAREBAZAAR_AUTH_KEY=${MALWAREBAZAAR_AUTH_KEY}
+      - MALWAREBAZAAR_AUTH_KEY=${ABUSECH_AUTH_KEY}
     restart: always
 
   connector-urlhaus:
@@ -317,7 +317,7 @@ services:
       - CONNECTOR_NAME=URLhaus
       - CONNECTOR_SCOPE=indicator,observable
       - INTERVAL=3600
-      - URLHAUS_AUTH_KEY={URLHAUS_AUTH_KEY}
+      - URLHAUS_AUTH_KEY={ABUSECH_AUTH_KEY}
       - DOWNLOAD_PAYLOAD=false
     restart: always
 
@@ -334,7 +334,7 @@ services:
       - THREATFOX_QUERY=get_iocs
       - THREATFOX_DAYS=1
       - THREATFOX_INTERVAL=86400
-      - THREATFOX_AUTH_KEY={THREATFOX_AUTH_KEY}
+      - THREATFOX_AUTH_KEY={ABUSECH_AUTH_KEY}
     restart: always
 
 volumes:
