@@ -307,6 +307,35 @@ services:
       - MALWAREBAZAAR_AUTH_KEY=${MALWAREBAZAAR_AUTH_KEY}
     restart: always
 
+  connector-urlhaus:
+    image: opencti/connector-urlhaus:6.6.17
+    environment:
+      - OPENCTI_URL=http://172.18.0.6:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_URLHAUS_ID}
+      - CONNECTOR_TYPE=EXTERNAL_IMPORT
+      - CONNECTOR_NAME=URLhaus
+      - CONNECTOR_SCOPE=indicator,observable
+      - INTERVAL=3600
+      - URLHAUS_AUTH_KEY={URLHAUS_AUTH_KEY}
+      - DOWNLOAD_PAYLOAD=false
+    restart: always
+
+  connector-threatfox:
+    image: opencti/connector-threatfox:rolling
+    environment:
+      - OPENCTI_URL=http://172.18.0.6:8080
+      - OPENCTI_TOKEN=${OPENCTI_ADMIN_TOKEN}
+      - CONNECTOR_ID=${CONNECTOR_THREATFOX_ID}
+      - CONNECTOR_TYPE=EXTERNAL_IMPORT
+      - CONNECTOR_NAME=ThreatFox
+      - CONNECTOR_SCOPE=indicator,observable
+      - THREATFOX_API_URL=https://threatfox-api.abuse.ch/api/v1/
+      - THREATFOX_QUERY=get_iocs
+      - THREATFOX_DAYS=1
+      - THREATFOX_INTERVAL=86400
+      - THREATFOX_AUTH_KEY={THREATFOX_AUTH_KEY}
+    restart: always
 
 volumes:
   esdata:
